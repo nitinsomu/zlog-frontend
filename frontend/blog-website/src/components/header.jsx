@@ -1,16 +1,14 @@
 import './header.css'
-
+import { Link } from 'react-router-dom';
 function Header() {
     return (
-        <main>
-            <header>
-                <a href="" className="logo">Zlog</a>
-                <nav>
-                    <a href="">Login</a>
-                    <a href="">Register</a>
-                </nav>
-            </header>
-        </main>
+        <header>
+            <Link to="/" className="logo">Zlog</Link>
+            <nav>
+                <Link to="/login">Login</Link>
+                <Link to="/register">Register</Link>
+            </nav>
+        </header>
     )
 }
 
