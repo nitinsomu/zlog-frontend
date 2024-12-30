@@ -1,0 +1,38 @@
+* {
+    font-family: "Roboto Mono", serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;    
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+    gap: 10px;
+    align-items: center;
+}
+
+.register, .login {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.register button, .login button {
+    height: 30px;
+    width: 100px;
+    background-color: rgb(138, 135, 135);
+    border-radius: 9px;
+    border: none;
+}
+
+.register input, .login input {
+    height: 25px;
+    width: 230px;
+    border-radius: 9px;
+    border: none;
+    background-color: rgb(217, 214, 214);
+    padding-left: 10px
+}
+
