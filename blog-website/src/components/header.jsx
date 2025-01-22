@@ -1,16 +1,17 @@
-import { useEffect, useState } from 'react';
+import { useEffect, useState, useContext } from 'react';
 import './header.css'
 import { Link } from 'react-router-dom';
+import { UserContext } from '../UserContext';
 
 function Header() {
-    const [username, setUsername] = useState(null);
+    const {setUserInfo, userInfo} = useContext(UserContext)
     useEffect(() => {
         fetch('http://localhost:5000/profile', {
             credentials: 'include',
         }
         ).then(response => {
                 response.json().then(userData => {
-                setUsername(userData.username)
+                setUserInfo(userData);
             })
         }).catch(err => {
             console.error('Failed to fetch profile:', err);
@@ -22,9 +23,9 @@ function Header() {
             method: 'POST',
             credentials: 'include'
         });
-        setUsername(null);
+        setUserInfo(null);
     }
-
+    const username = userInfo?.username;
     return (
         <header>
             <Link to="/" className="logo">Zlog</Link>
