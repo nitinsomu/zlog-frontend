@@ -1,8 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;700&display=swap');
 * {
     font-family: "Roboto Mono", serif;
-    font-optical-sizing: auto;
-    font-weight: 400;
-    font-style: normal;    
 }
 
 form {
@@ -36,3 +34,37 @@ form {
     padding-left: 10px
 }
 
+.createPost {
+    font-weight: auto;
+    font-style: auto;  
+    width: 800px;
+    display: flex;
+    flex-direction: column;
+    gap:10px;
+}
+
+.createPost input {
+    height: 25px;
+    border-radius: 9px;
+    border: none;
+    background-color: rgb(217, 214, 214);
+    padding-left: 10px    
+}
+.createPost input[type="file"] {
+    height: 30px;
+    display: flex;
+    justify-content: center;
+}
+.createPost button {
+    height: 30px;
+    background-color: rgb(138, 135, 135);
+    border-radius: 9px;
+    border: none;    
+}
+
+.createPost input[type="file"]::file-selector-button {
+    height: 100%;
+    background-color: rgb(138, 135, 135);
+    border-radius: 9px;
+    border: none;    
+}
