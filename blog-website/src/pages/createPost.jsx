@@ -33,9 +33,10 @@ export default function CreatePost() {
         formData.set('summary', summary);
         formData.set('content', content);
         formData.set('file', file[0]);
-        const response = await fetch('http://localhost:5000/create', {
+        const response = await fetch('http://localhost:5000/post', {
             method: 'POST',
-            body: formData
+            body: formData,
+            credentials: 'include'
         });
         if(response.ok) {
             setRedirect(true);
