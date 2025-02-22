@@ -25,6 +25,7 @@ export default function Body() {
                     heading={post.title} 
                     text={post.summary} 
                     author={post.username}
+                    _id={post._id}
                 />
             ))}
         </div>

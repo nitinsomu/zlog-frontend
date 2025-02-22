@@ -68,3 +68,23 @@ form {
     border-radius: 9px;
     border: none;    
 }
+
+div.post div.texts a {
+    text-decoration: none;
+    color: inherit
+}
+
+.postPage h1{
+    margin-bottom: 0;
+}
+
+.postPage .image{
+    max-height: 200px;
+    overflow: hidden;
+    display: flex;
+}
+
+.postPage .image img{
+    object-fit: cover;
+    object-position: center center;
+}

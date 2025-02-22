@@ -19,6 +19,7 @@ export default function Register() {
             const errorData = await response.json()
             alert(errorData.error);
         }
+        window.location.href = '/login';
     }
     return (
         <div className="register">
